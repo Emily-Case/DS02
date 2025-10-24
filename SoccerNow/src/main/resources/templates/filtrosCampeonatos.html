@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Filtros de Campeonatos</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/paraHome.css}">
+</head>
+<body>
+<div class="central-box">
+    <h1 th:text="#{titulo.filtros.campeonatos}">Filtros de Campeonatos</h1>
+
+    <form th:action="@{/filtros/campeonatos/nome}" method="get">
+        <label th:text="#{label.nome.campeonato}">Nome do Campeonato:</label>
+        <input type="text" name="nome" required/>
+        <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+    </form>
+
+    <form th:action="@{/filtros/campeonatos/equipa}" method="get">
+        <label th:text="#{label.nome.equipa}">Nome de uma Equipa:</label>
+        <input type="text" name="nomeEquipa" required/>
+        <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+    </form>
+
+    <form th:action="@{/filtros/campeonatos/jogos-realizados}" method="get">
+        <label  th:text="#{label.jogos.realizados}">Número de Jogos Realizados:</label>
+        <input type="number" name="num" min="0" required/>
+        <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+    </form>
+
+    <form th:action="@{/filtros/campeonatos/jogos-por-realizar}" method="get">
+        <label th:text="#{label.jogos.por.realizar}">Número de Jogos Por Realizar:</label>
+        <input type="number" name="num" min="0" required/>
+        <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+    </form>
+
+    <button onclick="history.back()" th:text="#{button.voltar}">Voltar</button>
+</div>    
+</body>
+</html>

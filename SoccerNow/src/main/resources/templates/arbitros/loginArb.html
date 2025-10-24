@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login Arbitro</title>
+    <link rel="stylesheet" th:href="@{/css/paraArbitros.css}">
+</head>
+<body>
+    <div class = "central-box">
+        <h1 id="titulo">Login Arbitro</h1>
+    <form th:action="@{/arbitros/login}" th:object="${arbitro}" method="post">
+        <label th:for="*{nome}" th:text="#{label.nome}">Nome:</label>
+        <input type="text" th:field="*{nome}" required /><br>
+
+        <label th:for="*{password}" th:text="#{label.password}">Password:</label>
+        <input type="password" th:field="*{password}" required /><br>
+
+        <button type="submit" th:text="#{button.entrar}">Entrar</button>
+        <button type="button" onclick="history.back()" th:text="#{button.voltar}">Voltar</button>
+    </form>
+    <p th:if="${errorMessage}" th:text="${errorMessage}" style="color:red;"></p>
+    </div>
+</body>
+</html>

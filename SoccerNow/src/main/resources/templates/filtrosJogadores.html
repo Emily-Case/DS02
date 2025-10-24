@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Filtros de Jogadores</title>
+    <link rel="stylesheet" th:href="@{/css/paraHome.css}">
+</head>
+<body>
+    <div class="central-box">
+        <h1 th:text="#{titulo.filtros.jogadores}">Filtros de Jogadores</h1>
+        <p th:text="#{texto.escolha.filtro}">Escolhe um filtro:</p>
+
+        <form th:action="@{/filtros/jogadores/nome}" method="get">
+            <label for="nome" th:text="#{label.nome.jogador}">Nome do Jogador:</label>
+            <input type="text" name="nome" required>
+            <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+        </form>
+
+        <form th:action="@{/filtros/jogadores/posicao}" method="get">
+            <label for="posicao" th:text="#{label.posicao}">Posição:</label>
+            <select name="posicao" required>
+                <option value="GK" th:text="#{posicao.gk}">Guarda-Redes</option>
+                <option value="DEF" th:text="#{posicao.def}">Defesa</option>
+                <option value="MED" th:text="#{posicao.med}">Médio</option>
+                <option value="ATQ" th:text="#{posicao.atq}">Avançado</option>
+            </select>
+            <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+        </form>
+
+        <form th:action="@{/filtros/jogadores/golos}" method="get">
+            <label for="numGolos" th:text="#{label.num.golos}">Número de Golos:</label>
+            <input type="number" name="numGolos" min="0" required>
+            <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+        </form>
+
+        <form th:action="@{/filtros/jogadores/cartoes}" method="get">
+            <label for="numCartoes" th:text="#{label.num.cartoes}">Número de Cartões:</label>
+            <input type="number" name="numCartoes" min="0" required>
+            <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+        </form>
+
+        <form th:action="@{/filtros/jogadores/jogos}" method="get">
+            <label for="numJogos" th:text="#{label.num.jogos}">Número de Jogos:</label>
+            <input type="number" name="numJogos" min="0" required>
+            <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+        </form>
+
+        <br>
+        <button onclick="history.back()" th:text="#{button.voltar}">Voltar</button>
+    </div>
+</body>
+</html>

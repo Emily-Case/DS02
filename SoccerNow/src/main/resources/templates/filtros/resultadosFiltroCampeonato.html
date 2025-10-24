@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resultados - Filtro Campeonato</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/paraHome.css}">
+</head>
+<body>
+<div class="central-box">
+    <h1>Campeonatos Encontrados</h1>
+    <p th:text="'Critério de busca: ' + ${criterio}"></p>
+
+    <ul>
+        <li th:each="campeonato : ${campeonatos}">
+            <span th:text="${campeonato.nome}"></span>
+            <ul>
+                <li th:each="equipa : ${campeonato.equipas}" th:text="'- ' + ${equipa.nome}">Equipa</li>
+            </ul>
+        </li>
+    </ul>
+
+    <br>
+    <button onclick="history.back()" th:text="#{button.voltar}">Voltar</button>
+</div>
+</body>
+</html>

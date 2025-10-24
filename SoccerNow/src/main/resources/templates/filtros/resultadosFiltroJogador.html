@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resultados - Filtro por Nome</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/paraHome.css}">
+</head>
+<body>
+    <div class="central-box">
+        <h1 th:text="#{titulo.resultado.filtro.jogador}">Resultados do Filtro Escolhido</h1>
+        <p th:text="'Critério de pesquisa: ' + ${criterio}"></p>
+
+        <ul>
+            <li th:each="jogador : ${jogadores}"
+                th:text="${jogador.nome + ' >> NIF : ' + jogador.nif + ' >> Posicao : ' + jogador.posicao + ' >> Número de Jogos : ' + jogador.numJogos}">Nome >> NIF >> Posicao</li>
+        </ul>
+
+        <br>
+        <button onclick="history.back()">Voltar</button>
+    </div>
+</body>
+</html>

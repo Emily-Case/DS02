@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.ul.fc.di.css.javafxexample.presentation.control.UpdateArbitroController">
+   <children>
+      <Label layoutX="182.0" layoutY="28.0" text="Atualiza os teus dados">
+         <font>
+            <Font name="Baskerville Old Face" size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="108.0" layoutY="127.0" />
+      <Label layoutX="108.0" layoutY="110.0" text="Nome :" />
+      <Label layoutX="108.0" layoutY="165.0" text="Password :" />
+      <PasswordField fx:id="password" layoutX="108.0" layoutY="188.0" />
+      <Button layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onAction="#clickVoltar" text="Voltar" />
+      <Label fx:id="nif" layoutX="313.0" layoutY="131.0" text="NIF: " />
+      <Label fx:id="numJogos" layoutX="311.0" layoutY="192.0" text="Número de jogos: " />
+      <Label fx:id="certificate" layoutX="108.0" layoutY="241.0" text="Tem certificado? " />
+      <Button fx:id="bttnSave" layoutX="110.0" layoutY="282.0" mnemonicParsing="false" onAction="#clickSave" text="Guardar" />
+      <Button layoutX="311.0" layoutY="237.0" mnemonicParsing="false" onAction="#addCertificado" text="Adicionar certificado" />
+   </children>
+</AnchorPane>

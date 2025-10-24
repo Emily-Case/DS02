@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.ul.fc.di.css.javafxexample.presentation.control.RegistoArbitroController">
+   <children>
+      <TextField fx:id="txtNomeA" layoutX="207.0" layoutY="104.0" />
+      <PasswordField fx:id="txtPasswordA" layoutX="207.0" layoutY="178.0" />
+      <Label layoutX="207.0" layoutY="161.0" text="Password:" />
+      <Label layoutX="207.0" layoutY="87.0" text="Nome:" />
+      <TextField fx:id="txtNIFA" layoutX="207.0" layoutY="251.0" />
+      <Label layoutX="207.0" layoutY="234.0" text="NIF:" />
+      <Button fx:id="bttnRegistarA" layoutX="252.0" layoutY="336.0" mnemonicParsing="false" onAction="#registarA" text="Registar" />
+      <Label layoutX="197.0" layoutY="43.0" text="Regista um Árbitro">
+         <font>
+            <Font name="Baskerville Old Face" size="27.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#clickVoltar" text="Voltar" />
+      <CheckBox fx:id="certificado" layoutX="242.0" layoutY="296.0" mnemonicParsing="false" text="Certificado" />
+   </children>
+</AnchorPane>

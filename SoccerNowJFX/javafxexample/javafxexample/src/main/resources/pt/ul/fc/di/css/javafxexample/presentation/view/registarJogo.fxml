@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="394.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.ul.fc.di.css.javafxexample.presentation.control.RegistoJogoController">
+   <children>
+      <ScrollPane layoutY="-6.0" prefHeight="400.0" prefWidth="600.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1561.0" prefWidth="602.0">
+               <children>
+                  <TextField fx:id="data" layoutX="227.0" layoutY="127.0" />
+                  <Label layoutX="227.0" layoutY="176.0" prefHeight="17.0" prefWidth="216.0" text="Horario (Ex: 2025-04-25T21:43:33.825):" />
+                  <Label layoutX="227.0" layoutY="110.0" text="Data (AAAA-MM-DD) :" />
+                  <TextField fx:id="horario" layoutX="227.0" layoutY="193.0" />
+                  <Label layoutX="227.0" layoutY="238.0" text="Localização:" />
+                  <Button fx:id="bttnRegistar" layoutX="262.0" layoutY="1382.0" mnemonicParsing="false" onAction="#registar" text="Registar" />
+                  <Label layoutX="216.0" layoutY="42.0" text="Regista um Jogo">
+                     <font>
+                        <Font name="Baskerville Old Face" size="27.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="bttnVoltar" layoutX="14.0" layoutY="17.0" mnemonicParsing="false" onAction="#clickVoltar" text="Voltar" />
+                  <ChoiceBox fx:id="arbitroP" layoutX="226.0" layoutY="354.0" prefWidth="150.0">
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </ChoiceBox>
+                  <Label layoutX="226.0" layoutY="335.0" text="Árbitro Principal:" />
+                  <ListView fx:id="listaArbitros" layoutX="101.0" layoutY="407.0" prefHeight="260.0" prefWidth="416.0" />
+                  <Label layoutX="148.0" layoutY="379.0" text="Seleciona outros árbitros:" />
+                  <ChoiceBox fx:id="equipa1" layoutX="103.0" layoutY="715.0" prefWidth="150.0" />
+                  <Label layoutX="101.0" layoutY="692.0" text="Equipa 1:" />
+                  <Label layoutX="371.0" layoutY="693.0" text="Equipa 2:" />
+                  <ChoiceBox fx:id="equipa2" layoutX="371.0" layoutY="713.0" prefWidth="150.0" />
+                  <TextField fx:id="localizacao" layoutX="227.0" layoutY="255.0" />
+                  <ChoiceBox fx:id="guardaRedes1" layoutX="216.0" layoutY="1020.0" prefWidth="150.0" />
+                  <Label layoutX="185.0" layoutY="997.0" text="Seleciona um guarda redes para a equipa 1:" />
+                  <ChoiceBox fx:id="guardaRedes2" layoutX="218.0" layoutY="1334.0" prefWidth="150.0" />
+                  <Label layoutX="179.0" layoutY="1317.0" text="Seleciona um guarda redes para a equipa 2" />
+                  <ListView fx:id="jogadoresEquipa1" layoutX="99.0" layoutY="784.0" prefHeight="200.0" prefWidth="420.0" />
+                  <Label layoutX="130.0" layoutY="758.0" text="Seleciona 5 jogadores para jogarem na equipa 1:" />
+                  <ListView fx:id="jogadoresEquipa2" layoutX="99.0" layoutY="1101.0" prefHeight="200.0" prefWidth="420.0" />
+                  <Label layoutX="130.0" layoutY="1075.0" text="Seleciona 5 jogadores para jogarem na equipa 2:" />
+                  <Label layoutX="227.0" layoutY="287.0" text="Campeonato:" />
+                  <ChoiceBox fx:id="campeonato" layoutX="226.0" layoutY="304.0" prefWidth="150.0">
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </ChoiceBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

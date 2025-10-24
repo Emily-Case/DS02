@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.ul.fc.di.css.javafxexample.presentation.control.optionsOrganizadorController">
+   <children>
+      <Label layoutX="185.0" layoutY="61.0" text="Escolhe o que fazer:">
+         <font>
+            <Font name="Baskerville Old Face" size="27.0" />
+         </font>
+      </Label>
+      <Pane layoutX="100.0" layoutY="105.0" prefHeight="190.0" prefWidth="170.0">
+         <children>
+            <Button fx:id="bttnRegistarJogador" alignment="CENTER" layoutX="33.0" layoutY="14.0" mnemonicParsing="false" onAction="#registarJogador" text="Registar Jogador" />
+            <Button fx:id="bttnRegistarArbitro" layoutX="35.0" layoutY="47.0" mnemonicParsing="false" onAction="#registarArbitro" text="Registar Árbitro" />
+            <Button fx:id="bttnRegistarEquipa" layoutX="36.0" layoutY="83.0" mnemonicParsing="false" onAction="#registarEquipa" text="Registar Equipa" />
+            <Button fx:id="bttnRegistarJogo" layoutX="41.0" layoutY="116.0" mnemonicParsing="false" onAction="#registarJogo" text="Registar Jogo" />
+            <Button fx:id="bttnRegistarCampeonato" layoutX="20.0" layoutY="151.0" mnemonicParsing="false" onAction="#registarCampeonato" text="Registar Campeonato" />
+         </children>
+      </Pane>
+      <Label layoutX="114.0" layoutY="130.0" />
+      <Pane layoutX="275.0" layoutY="121.0" prefHeight="190.0" prefWidth="253.0">
+         <children>
+            <Button fx:id="bttnRemoverEquipa" layoutX="77.0" layoutY="82.0" mnemonicParsing="false" onAction="#removerEquipa" text="Remover Equipa" />
+            <Button fx:id="bttnCancelarJogo" layoutX="82.0" layoutY="116.0" mnemonicParsing="false" onAction="#cancelarJogo" text="Cancelar  Jogo" />
+            <Button fx:id="bttnCancelarCampeonato" layoutX="62.0" layoutY="151.0" mnemonicParsing="false" onAction="#cancelarCampeonato" text="Cancelar Campeonato" />
+            <Button fx:id="bttnRemoverEquipaCampeonato" layoutX="6.0" layoutY="14.0" mnemonicParsing="false" onAction="#removerEquipaDeCampeonato" text="Adicionar/Remover Equipa de Campeonato" />
+            <Button fx:id="bttnAtualizarCampeonato" layoutX="62.0" layoutY="49.0" mnemonicParsing="false" onAction="#atualizarCampeonato" text="Atualizar Campeonato" />
+         </children>
+      </Pane>
+      <Pane layoutX="106.0" layoutY="320.0" prefHeight="55.0" prefWidth="389.0">
+         <children>
+            <Button fx:id="bttnListaJogadores" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#listaJogadores" text="Jogadores" />
+            <Button fx:id="bttnListaArbitros" layoutX="94.0" layoutY="15.0" mnemonicParsing="false" onAction="#listaArbitros" text="Árbitros" />
+            <Button fx:id="bttnListaEquipas" layoutX="163.0" layoutY="15.0" mnemonicParsing="false" onAction="#listaEquipas" text="Equipas" />
+            <Button fx:id="bttnListaJogos" layoutX="230.0" layoutY="15.0" mnemonicParsing="false" onAction="#listaJogos" text="Jogos" />
+            <Button fx:id="bttnListaCampeonatos" layoutX="286.0" layoutY="15.0" mnemonicParsing="false" onAction="#listaCampeonatos" text="Campeonatos" />
+         </children>
+      </Pane>
+      <Label layoutX="114.0" layoutY="312.0" text="Ver lista de:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="bttnVoltar" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#clickVoltar" text="Voltar" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Filtros de Jogos</title>
+    <link rel="stylesheet" th:href="@{/css/paraHome.css}">
+</head>
+<body>
+    <div class="central-box">
+    <h1 th:text="#{titulo.filtros.jogos}">Filtros de Jogos</h1>
+
+    <form th:action="@{/filtros/jogos/realizados}" method="get">
+        <label th:text="#{filtros.jogos.realizados}">Jogos Realizados: </label>
+        <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+    </form>
+
+    <form th:action="@{/filtros/jogos/por-realizar}" method="get">
+        <label th:text="#{filtros.jogos.por.realizar}">Jogos por Realizar: </label>
+        <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+    </form>
+
+    <form th:action="@{/filtros/jogos/golos}" method="get">
+        <label for="totalGolos" th:text="#{label.total.golos}">Quantidade de Golos :</label>
+        <input type="number" id="totalGolos" name="totalGolos" min="0" required>
+        <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+    </form>
+
+    <form th:action="@{/filtros/jogos/localizacao}" method="get">
+        <label for="localizacao" th:text="#{label.localizacao}">Localização :</label>
+        <input type="text" id="localizacao" name="localizacao" required>
+        <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+    </form>
+
+    <form th:action="@{/filtros/jogos/turno}" method="get">
+        <label for="turno" th:text="#{label.turno}">Turno do Jogo :</label>
+        <select id="turno" name="turno">
+            <option value="manha" th:text="#{turno.manha}">Manhã</option>
+            <option value="tarde" th:text="#{turno.tarde}">Tarde</option>
+            <option value="noite" th:text="#{turno.noite}">Noite</option>
+        </select>
+        <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+    </form>
+
+    <br>
+    <button onclick="history.back()" th:text="#{button.voltar}">Voltar</button>
+    </div>
+</body>
+</html>

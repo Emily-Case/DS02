@@ -1,0 +1,80 @@
+body {
+    background-color: rgb(44, 179, 224);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    padding: 75px 50px; /*cima e baixo - 25px -- e -- esquerda e direita - 50px*/
+}
+
+
+.central-box {
+    background-color: white;
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #034081;
+}
+
+.error-message {
+    color: #d9534f;
+    margin-bottom: 15px;
+}
+
+
+h1, p {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#titulo {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

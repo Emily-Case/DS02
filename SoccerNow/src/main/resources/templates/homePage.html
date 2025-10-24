@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="#{titulo.homepage}">SoccerNow - Escolher Login</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/paraHome.css}">
+</head>
+<body>
+    <div class = "central-box">
+        <h1 id="titulo" th:text="#{bemvindo.soccernow}">Bem-vindo ao SoccerNow!</h1>
+        <p th:text="#{escolha.tipo.login}">Escolhe o teu tipo de login:</p>
+        
+        <div class = "button-container">
+            <form th:action="@{/jogadores/login}" method="get">
+                <button type="submit" th:text="#{login.jogador}">Login como Jogador</button>
+            </form>
+        
+            <form th:action="@{/arbitros/login}" method="get">
+                <button type="submit" th:text="#{login.arbitro}">Login como Árbitro</button>
+            </form>
+        </div>
+
+    </div>
+    
+</body>
+</html>

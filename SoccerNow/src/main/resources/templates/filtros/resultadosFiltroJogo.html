@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resultados - Filtro de Jogo</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/paraHome.css}">
+</head>
+<body>
+<div class="central-box">
+    <h1 th:text="#{titulo.resultados.filtro}">Resultados do Filtro</h1>
+    <p th:text="'Critério de pesquisa: ' + ${criterio}"></p>
+
+    <ul>
+        <li th:each="jogo : ${jogos}"
+            th:text="${'Data: ' + jogo.data + 
+                      ' | Hora: ' + jogo.horario.toLocalTime() +
+                      ' | Localização: ' + jogo.localizacao + 
+                      ' | Estado: ' + jogo.status +
+                      ' | Equipas: ' + jogo.equipas[0].equipa.nome + ' vs ' + jogo.equipas[1].equipa.nome}">
+            Data | Hora | Localização | Estado | Equipas
+        </li>
+    </ul>
+
+    <br>
+    <button onclick="history.back()" th:text="#{button.voltar}">Voltar</button>
+</div>
+</body>
+</html>
