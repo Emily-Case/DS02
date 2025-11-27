@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Filtros de Árbitros</title>
+    <link rel="stylesheet" th:href="@{/css/paraHome.css}">
+</head>
+<body>
+    <div class="central-box">
+        <h1 th:text="#{filtros.titulo}">Filtros de Árbitros</h1>
+        <p th:text="#{filtros.texto}">Escolhe um filtro:</p>
+
+        <form th:action="@{/filtros/arbitros/nome}" method="get">
+            <label for="nome" th:text="#{filtros.nome}">Nome do Árbitro:</label>
+            <input type="text" name="nome" required>
+            <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+        </form>
+
+        <form th:action="@{/filtros/arbitros/jogos}" method="get">
+            <label for="numJogos" th:text="#{filtros.jogos}">Número de Jogos Oficiados:</label>
+            <input type="number" name="numJogos" min="0" required>
+            <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+        </form>
+
+        <form th:action="@{/filtros/arbitros/cartoes}" method="get">
+            <label for="numCartoes" th:text="#{filtros.cartoes}">Número de Cartões Mostrados:</label>
+            <input type="number" name="numCartoes" min="0" required>
+            <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+        </form>
+
+        <br>
+        <button onclick="history.back()" th:text="#{button.voltar}">Voltar</button>
+    </div>
+</body>
+</html>

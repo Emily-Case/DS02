@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resultados - Busca pelo Nome</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/paraHome.css}">
+</head>
+<body>
+<div class="central-box">
+    <h1 th:text="#{titulo.resultado.equipa}">Resultados da Busca pelo Nome da Equipa</h1>
+    <p th:text="'Critério de pesquisa: ' + ${criterio}"></p>
+
+    <ul>
+        <li th:each="equipa : ${equipas}">
+            <span th:text="${equipa.nome + ' | Nº Jogadores: ' + equipa.jogadores.size() + ' | Nº Jogos: ' + equipa.historicoJogos.size()}">
+                Nome da Equipa | Nº Jogadores | Nº Jogos
+            </span>
+            <span>
+            <ul class="jogadores-lista">
+                <li th:each="jogador : ${equipa.jogadores}"
+                    th:text="${jogador.nome} + ' | NIF: ' + ${jogador.nif} + ' | Posição: ' + ${jogador.posicao}">Nome do Jogador</li>
+            </ul>
+            </span>
+        </li>
+    </ul>
+
+    <br>
+    <button onclick="history.back()">Voltar</button>
+</div>
+</body>
+</html>

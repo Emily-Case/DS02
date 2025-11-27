@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Filtros de Equipas</title>
+    <link rel="stylesheet" th:href="@{/css/paraHome.css}">
+</head>
+<body>
+<div class="central-box">
+    <h1 th:text="#{titulo.filtros.equipas}">Filtros Disponíveis para Equipas</h1>
+
+    <form th:action="@{/filtros/equipas/nome}" method="get">
+        <label for="nome" th:text="#{label.nome.equipa}">Nome da Equipa:</label>
+        <input type="text" id="nome" name="nome" required>
+        <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+    </form>
+
+    <form th:action="@{/filtros/equipas/numero-jogadores}" method="get">
+        <label for="numJogadores" th:text="#{label.num.jogadores}">Número de Jogadores:</label>
+        <input type="number" id="numJogadores" name="numJogadores" min="0" required>
+        <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+    </form>
+
+    <!-- Filtro separado em três-->
+    <!-- Filtro por Vitórias -->
+    <form th:action="@{/filtros/equipas/numero-vitorias}" method="get">
+        <label for="vitorias">Número de Vitórias:</label>
+        <input type="number" id="vitorias" name="numVitorias" min="0" required>
+        <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+    </form>
+
+    <!-- Filtro por Empates -->
+    <form th:action="@{/filtros/equipas/numero-empates}" method="get">
+        <label for="empates">Número de Empates:</label>
+        <input type="number" id="empates" name="numEmpates" min="0" required>
+        <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+    </form>
+
+    <!-- Filtro por Derrotas -->
+    <form th:action="@{/filtros/equipas/numero-derrotas}" method="get">
+        <label for="derrotas">Número de Derrotas:</label>
+        <input type="number" id="derrotas" name="numDerrotas" min="0" required>
+        <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+    </form>
+
+    <form th:action="@{/filtros/equipas/numero-conquistas}" method="get">
+        <label for="numConquistas">Número de Conquistas:</label>
+        <input type="number" id="numConquistas" name="numConquistas" min="0" required>
+        <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+    </form>
+
+    <form th:action="@{/filtros/equipas/ausencia-posicao}" method="get">
+        <label for="posicao" th:text="#{label.posicaoEmFalta}">Posição em Falta:</label>
+        <select id="posicao" name="posicao">
+            <option value="GK" th:text="#{posicao.gk}">Guarda-Redes</option>
+            <option value="DEF" th:text="#{posicao.def}">Defesa</option>
+            <option value="MED" th:text="#{posicao.med}">Médio</option>
+            <option value="ATQ" th:text="#{posicao.atq}">Avançado</option>
+        </select>
+        <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+    </form>
+
+    <br>
+    <button onclick="history.back()" th:text="#{button.voltar}">Voltar</button>
+</div>
+</body>
+</html>

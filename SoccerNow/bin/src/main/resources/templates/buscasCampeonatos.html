@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Buscas de Campeonatos</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/paraHome.css}">
+</head>
+<body>
+<div class="central-box">
+    <h1 th:text="#{titulo.busca.campeonatos}">Busca por Campeonatos</h1>
+
+    <form th:action="@{/filtros/campeonatos/nome}" method="get">
+        <label th:text="#{label.nome.campeonato}">Nome do Campeonato:</label>
+        <input type="text" name="nome" />
+        <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+    </form>
+     <br>
+
+        <form th:action="@{/buscas/campeonatos/todos}" method="get">
+            <button type="submit" th:text="#{button.ver.todos.campeonatos}">Ver Todos os Campeonatos</button>
+        </form>
+
+    <br>
+    <button onclick="history.back()" th:text="#{button.voltar}">Voltar</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Atualizar Resultado do Jogo</title>
+    <link rel="stylesheet" th:href="@{/css/paraHome.css}">
+</head>
+<body>
+<div class="central-box">
+    <h1>Atualizar Resultado do Jogo</h1>
+
+    <form th:action="@{/jogos/update-resultado}" method="post">
+        <div>
+            <label for="campeonato">Nome do Campeonato:</label>
+            <input type="text" id="campeonato" name="nomeCampeonato" required>
+        </div>
+        <br>
+        <div>
+            <label for="equipaVencedora">Equipa Vencedora:</label>
+            <input type="text" id="equipaVencedora" name="nomeEquipaVencedora" required>
+        </div>
+        <br>
+        <div>
+            <label for="placard">Placard Final:</label>
+            <input type="text" id="placard" name="placard" placeholder="Ex: 3-1" required pattern="^\d{1,2}-\d{1,2}$" title="Formato: X-Y (ex: 2-0)">
+        </div>
+        
+        <br><br>
+        <button type="submit" th:text="#{button.filtrar}">Atualizar Resultado</button>
+    </form>
+
+    <br>
+    <button onclick="history.back()" th:text="#{button.voltar}">Voltar</button>
+</div>
+</body>
+</html>

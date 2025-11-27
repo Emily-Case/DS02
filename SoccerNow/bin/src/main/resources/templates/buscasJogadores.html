@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscas por Jogadores</title>
+    <link rel="stylesheet" th:href="@{/css/paraHome.css}">
+</head>
+<body>
+    <div class="central-box">
+        <h1 th:text="#{titulo.busca.jogadores}">Busca por Jogadores</h1>
+
+        <form th:action="@{/buscas/jogadores/nif}" method="get">
+            <label for="nif" th:text="#{label.nif.jogador}">NIF do Jogador:</label>
+            <input type="text" name="nif" required>
+            <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+        </form>
+        <br>
+
+        <form th:action="@{/buscas/jogadores/todos}" method="get">
+            <button type="submit" th:text="#{button.ver.todos.jogadores}">Ver Todos os Jogadores</button>
+        </form>
+
+        <br>
+        <button onclick="history.back()" th:text="#{button.voltar}">Voltar</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resultados - Equipas por Vitórias</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/paraHome.css}">
+</head>
+<body>
+<div class="central-box">
+    <h1>Resultados do Filtro</h1>
+    <p>Equipas com [[${criterio}]] vitórias</p>
+    <ul>
+        <li th:each="res : ${equipas}">
+            <span th:text="'Equipa: ' + ${res[0]} + ' | Campeonato: ' + ${res[1]}"></span>
+        </li>
+    </ul>
+    <button onclick="history.back()">Voltar</button>
+</div>
+</body>
+</html>

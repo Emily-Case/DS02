@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SoccerNow - Dashboard de Filtros</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/paraHome.css}">
+</head>
+<body>
+    <div class="central-box">
+        <h1 id="titulo">Dashboard de Filtros</h1>
+        <p>Escolhe a que filtros é que queres ter acesso:</p>
+        <div class="button-container">
+            <form th:action="@{/filtros/jogadores}" method="get">
+                <button type="submit">Filtros de Jogadores</button>
+            </form>
+
+            <form th:action="@{/filtros/arbitros}" method="get">
+                <button type="submit">Filtros de Arbitros</button>
+            </form>
+
+            <form th:action="@{/filtros/equipas}" method="get">
+                <button type="submit">Filtros de Equipas</button>
+            </form>
+
+            <form th:action="@{/filtros/jogos}" method="get">
+                <button type="submit">Filtros de Jogos</button>
+            </form>
+
+            <form th:action="@{/filtros/campeonatos}" method="get">
+                <button type="submit">Filtros de Campeonatos</button>
+            </form>
+        </div>
+    </div>
+    <div class="central-box">
+        <h1 id="titulo">Dashboard para Buscas</h1>
+        <p>Escolhe o que queres procurar:</p>
+        <div class="button-container">
+            <form th:action="@{/buscas/jogadores}" method="get">
+                <button type="submit">Buscar por Jogadores</button>
+            </form>
+
+            <form th:action="@{/buscas/equipas}" method="get">
+                <button type="submit">Buscar por Equipas</button>
+            </form>
+
+            <form th:action="@{/buscas/campeonatos}" method="get">
+                <button type="submit">Buscar por Campeonatos</button>
+            </form>
+        </div>
+    </div>
+    <div class="central-box">
+        <h1 id="titulo">Atualizar Resultado Final de um Jogo</h1>
+        <p>Clica no botão abaixo para atualizares o resultado final de um jogo específico:</p>
+        <div class="button-container">
+            <form th:action="@{/jogos/update-resultado}" method="get">
+                <button type="submit">Atualizar Resultado Final</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

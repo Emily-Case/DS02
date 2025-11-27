@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscas por Equipas</title>
+    <link rel="stylesheet" th:href="@{/css/paraHome.css}">
+</head>
+<body>
+<div class="central-box">
+    <h1 th:text="#{titulo.busca.equipas}">Busca por Equipas</h1>
+
+    <form th:action="@{/buscas/equipas/nome}" method="get">
+        <label for="nome" th:text="#{label.nome.equipa}">Nome da Equipa:</label>
+        <input type="text" id="nome" name="nome" required>
+        <button type="submit" th:text="#{button.filtrar}">Filtrar</button>
+    </form>
+    <br>
+
+        <form th:action="@{/buscas/equipas/todas}" method="get">
+            <button type="submit" th:text="#{button.ver.todas.equipas}">Ver Todas as Equipas</button>
+        </form>
+
+    <br>
+    <button onclick="history.back()" th:text="#{button.voltar}">Voltar</button>
+</div>
+</body>
+</html>

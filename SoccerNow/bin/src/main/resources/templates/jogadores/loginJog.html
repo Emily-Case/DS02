@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login Jogador</title>
+    <link rel="stylesheet" th:href="@{/css/paraJogadores.css}">
+</head>
+<body>
+    <div class = "central-box">
+        <h1 id="titulo">Login Jogador</h1>
+    <form th:action="@{/jogadores/login}" th:object="${jogador}" method="post">
+        <label th:text="#{label.nome}">Nome:</label>
+        <input type="text" name="nome" required /><br>
+
+        <label th:text="#{label.password}">Password:</label>
+        <input type="password" name="password" required /><br>
+
+        <button type="submit" th:text="#{button.entrar}">Entrar</button>
+        <button type="button" onclick="history.back()" th:text="#{button.voltar}">Voltar</button>
+    </form>
+    <p th:if="${errorMessage}" th:text="${errorMessage}" style="color:red;"></p>
+    </div>
+</body>
+</html>

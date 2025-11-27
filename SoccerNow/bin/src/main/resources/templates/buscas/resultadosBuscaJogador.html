@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="#{titulo.resultado.nif}">Resultados - Busca por NIF</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/paraHome.css}">
+</head>
+<body>
+    <div class="central-box">
+        <h1 th:text="#{titulo.resultado.nif}">Resultados da Busca pelo NIF do Jogador</h1>
+        <p th:text="'Critério de pesquisa: ' + ${criterio}"></p>
+
+        <ul>
+            <li th:each="jogador : ${jogadores}">
+                <span th:text="${jogador.nome}">Nome</span> |
+                <span th:text="#{label.nif} + ': ' + ${jogador.nif}">NIF</span> |
+                <span th:text="#{label.posicao} + ': ' + ${jogador.posicao}">Posição</span> |
+                <span th:text="#{label.jogos} + ': ' + ${jogador.numJogos}">Nº Jogos</span>
+                <br>
+                <span>
+                    <span th:text="#{label.equipas} + ':'">Equipas:</span>
+                    <span th:each="equipa, iterStat : ${jogador.equipas}"
+                          th:text="${equipa.nome + (iterStat.last ? '' : ', ')}">
+                        Nome da Equipa
+                    </span>
+                </span>
+            </li>
+                <!--th:text="${jogador.nome + ' >> NIF : ' + jogador.nif + ' >> Posicao : ' + jogador.posicao + ' >> Número de Jogos : ' + jogador.numJogos}">Nome >> NIF >> Posicao</li>-->
+        </ul>
+
+        <br>
+        <button onclick="history.back()" th:text="#{button.voltar}">Voltar</button>
+    </div>
+</body>
+</html>
